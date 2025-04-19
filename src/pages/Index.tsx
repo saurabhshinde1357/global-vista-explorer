@@ -1,4 +1,3 @@
-
 import { useState, useRef, useEffect } from 'react';
 import { useToast } from '@/components/ui/use-toast';
 import { Button } from '@/components/ui/button';
@@ -24,6 +23,7 @@ import WorldMap from '@/components/WorldMap';
 import NewsCard from '@/components/NewsCard';
 import DataChart from '@/components/DataChart';
 import RegionFilter from '@/components/RegionFilter';
+import Globe3D from '@/components/Globe3D';
 
 const Index = () => {
   const { toast } = useToast();
@@ -105,10 +105,8 @@ const Index = () => {
         ref={heroRef}
         className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-[#1A2238] to-[#2D3A5F] text-white overflow-hidden"
       >
-        {/* Background world map effect */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center" />
-        </div>
+        {/* Replace the background div with Globe3D */}
+        <Globe3D />
 
         {/* Navigation Bar */}
         <div className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-sm transition-all duration-300">
